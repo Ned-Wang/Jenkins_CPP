@@ -19,5 +19,10 @@ pipeline {
 				sh 'cd $(pwd)/build/ && make'
             }
         }
+        stage('Test') { 
+            steps {
+				sh 'cd $(pwd)/build/ && ./main.exe'
+			}
+		}			
     }
 }
