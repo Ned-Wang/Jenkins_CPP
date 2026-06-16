@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'pwd'
+				sh 'rm -r ./build'
 				sh 'mkdir -p build' 
                 sh 'cd $(pwd)/build/'
 				sh 'pwd'
