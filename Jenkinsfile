@@ -2,7 +2,10 @@ pipeline {
     agent any
 	environment {
         PATH = "C:/D/Programs/msys64/ucrt64/bin;${env.PATH}"
-    }	
+    }
+	triggers {
+        githubPush()  // 显式声明 GitHub 触发
+    }
     stages {
         stage('Build') { 
             steps {
