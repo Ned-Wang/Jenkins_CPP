@@ -16,6 +16,7 @@ pipeline {
 				
                 sh 'cd $(pwd)/build/'
                 sh 'cd $(pwd)/build/'
+				sh 'cd $(pwd)/build/'
 				sh 'pwd'
 				//这一步进不去build目录，pipeline 每一行的指令是独立的
 				
