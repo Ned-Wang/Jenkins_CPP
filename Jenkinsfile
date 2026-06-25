@@ -4,7 +4,7 @@ pipeline {
         PATH = "C:/D/Programs/msys64/ucrt64/bin;${env.PATH}"
     }
 	triggers {
-        //githubPush()  // 显式声明 GitHub 触发，git仓库 push后，自动trig Jenkins， 需要github仓库设置设置webhook
+        githubPush()  // 显式声明 GitHub 触发，git仓库 push后，自动trig Jenkins， 需要github仓库设置设置webhook
 		//pollSCM('H/5 * * * *')  // 每5分钟轮询一次
     }
     stages {
